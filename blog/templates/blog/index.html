@@ -1,0 +1,68 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Menu Principal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" />
+    
+</head>
+<body background="{% static 'img/fondo-audio.jpg' %}">
+    <header >
+        <nav  class="menu" >
+            <a href="/">Inicio</a>
+            <a href="/listadoCliente">Clientes</a>
+            <a href="/listadoOrden">Listado de Orden</a>
+            <a href="/Login">Iniciar Sesion</a> 
+        </nav>
+    </header>
+    <div>
+        <br>
+        <br>
+        <div class="Rescate">{% if not user.is_authenticated %}
+								
+            {% else %}
+            <h1 style="color: white;">Bienvenido {{ request.user }}</h1>
+            <button style="  background-color: #86d8bd;" type="submit"  name="btn-cerrar"  id="btn" class="btn-submit" value="Login"><a href="/salir/" style="color: black;" onclick="Mostrar()" > Cerrar Sesion </a></button>
+                                            
+            {% endif %}
+            
+            
+        </div>
+        
+        <br>
+        <br>
+         <p style="color: white"> Registrar un nuevo Cliente </p>
+         <button class="buttom"><a href="/Cliente">Nuevo Cliente</a></button>
+         <br>
+         <br>
+         <p style="color: white" > Registrar un nuevo Tecnico</p>
+         <button class="buttom"><a href="/Tecnico">Nuevo Tecnico</a></button>
+         <br>
+         <br>
+         <p style="color: white"> Registrar un nuevo Servicio</p>
+         <button class="buttom"><a href="/Orden">Nueva Orden de trabajo</a></button>
+         <br>
+         <br>
+         <br>
+        
+
+        
+         
+
+
+
+         
+    </div> 
+    <footer class="pie ">
+            <div class=" wrapper">
+                    <p class="textPie ">	Desarrollo web y Mobile,<br>
+                     Pagina web creado por Victor Lara y Franco ortiz </p>
+                </div>
+    </footer>
+
+</body>
+</html>

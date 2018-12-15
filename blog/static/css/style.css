@@ -1,0 +1,224 @@
+header{
+	width:100%;
+	height: 99px;
+	overflow: hidden;
+	
+	margin-bottom: 0px;
+	position: block;
+	
+}
+header nav{
+	float: right;
+    line-height: 100px;
+    padding-right: 100px;
+    
+   
+}
+header nav a{
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 20px;
+	line-height: normal;
+	font-size: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+
+}
+
+header nav a:hover{
+	background: #adadad;
+	border-radius: 50px;
+
+}
+
+footer #Abajo{
+    font:bold 100% cursive	;
+    color: #cccccc;
+    
+}
+.buttom{
+	background-color: antiquewhite;
+	border-style: dotted;
+	border-radius: 5px;
+
+}
+.form-label{
+	font-family: 'Courier New';
+	border-style: none;
+
+    font-size: 20px;
+    padding-right: 150px;
+}
+.form-header{
+    padding-left: 60px;
+    text-align: left;
+	font-family: 'Courier New';
+	border-style: ridge;
+	border-color: #000;
+    
+}
+.form-input{
+    width: auto;
+    height: 40px;
+    border-radius: 5px;
+    align-content: center;
+    border-color: #000000;
+}
+.btn-submit{
+    
+    
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    border-color: #050505;
+
+}
+
+body{
+    background-color: #848484;
+
+}
+.wrapper{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	font-family: 'Courier New';
+
+}
+.pie{
+	width:100%;
+	height: 100%;
+	height: 50px;
+	margin-top: 500px;
+	overflow: hidden;
+	background: #d2dbd8;
+	
+	}
+	.textPie{
+	float:  left;
+	color: gray;
+	font:  70% arial;
+	padding-left: 30px;
+	padding-top: 10px
+	}
+	
+label {
+    position: relative;
+     
+    
+      background-color: gray(0, 0, 0);
+      font-family: Arial rgb(255, 255, 255);
+
+}
+
+input {
+
+    
+    position: relative;
+    
+      background-color: gray(196, 160, 160);
+      font-family: Arial rgb(255, 255, 255);
+
+  }
+
+
+
+.form-group {
+    position: relative;
+    margin: 1% auto;
+  background-color: rgb(82, 82, 82);
+    border-style:inset;
+    border-color: black;
+}
+
+form{
+    color: rgb(0, 0, 0);
+  border-width:5px;  
+    
+
+}
+
+
+.formulario{
+  border-width:5px;  
+  width: 80%;
+  border-color: rgba(6, 39, 185, 0.781);
+  border-style:ridge;
+  align-content: left;
+  background-color: white;
+}
+.formulario2{
+  border-width:5px;  
+    width: 50%;
+    border-color: rgba(6, 39, 185, 0.781);
+    border-style:ridge;
+  align-content: left;
+  background-color: gray;
+}
+.formulario3{
+  border-width:5px;  
+  width: 100%;
+  border-color: rgba(6, 39, 185, 0.781);
+  border-style:ridge;
+  align-content: left;
+  background-color: gray;
+}
+
+table {
+  width: 100%;
+   border-collapse: separate;
+   border-spacing: 5px;
+   background: rgb(255, 255, 255)  bottom left repeat-x;
+   color: rgb(12, 12, 12);
+}
+td, th {
+   background: #fff;
+   color: rgba(6, 39, 185, 0.781);;
+   width: 15%;
+   padding: 0.3em;
+}
+@media screen and (max-width: 920px){
+    header-logo,
+    header nav{
+        width:100%;
+        text-align: center;
+        padding-left: 550px;
+
+
+    }
+   
+	header nav a{
+		display: inline-block;
+		color: #fff;
+		text-decoration: none;
+		padding: 10px 20px;
+		line-height: normal;
+		font-size: 20px;
+		font-size: 20px;
+		font-weight: bold;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease;
+	
+	}
+	
+	header nav a:hover{
+		background: #7775e9;
+        border-radius: 50px;
+        
+	
+	}
+
+    header{
+		height: auto;
+		width: auto;
+		position: none;
+		display: block;
+        margin-bottom: -5px;
+    }
+}

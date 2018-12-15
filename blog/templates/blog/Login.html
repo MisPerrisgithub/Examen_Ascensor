@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" />
+    <title>Inicio de Sesion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+</head>
+<body background="{% static 'img/fondo-audio.jpg' %}">
+    <header >
+            <nav  class="menu">
+                <a href="/">Inicio</a>
+                <a href="/listadoCliente">Clientes</a>
+                <a href="/listadoOrden">Listado de Orden</a>
+                <a href="/Login">Iniciar Sesion</a> 
+            </nav>
+    </header>
+    <center>
+    <div class="formulario" style="background-color:  #4f5174">
+        <form method="post" action="{% url 'user_login' %}">
+        {% csrf_token %}
+        {# A more "HTML" way of creating the login form#}
+        <div class="form-header">
+            <center><h1 >Inicio de Sesion</h1></center>
+        
+        </div>
+            <br>
+
+            <label for="username" class="form-label">Usuario:</label>
+            <input type="text" name="username" class="form-input" placeholder="Username">
+
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" name="password"  class="form-input"placeholder="Password">
+            <br>
+            <br>
+            
+        <input  type="submit" value="Iniciar Sesion"  name="btn"  id="btn" class="btn-submit" ><a style="color: black;" href="/">
+     
+
+        <input style="margin-left: 10px; margin-top: -250px;" type="submit" value="registro"  name="btn"  id="btn" class="btn-submit" ><a style=" color: black;" href="/Tecnico">
+    </div>
+</center>
+    <footer class="pie ">
+            <div class=" wrapper">
+                    <p class="textPie ">	Desarrollo web y Mobile,<br>
+                     Pagina web creado por Victor Lara y Franco ortiz </p>
+                </div>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,102 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Menu Principal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" />
+    
+</head>
+<body background="{% static 'img/fondo-audio.jpg' %}">
+    <header>
+            <nav  class="menu">
+                    <a href="/">Inicio</a>
+                    <a href="/listadoCliente">Clientes</a>
+                    <a href="/listadoOrden">Listado de Orden</a>
+                    <a href="/Login">Iniciar Sesion</a> 
+                </nav>
+    </header>
+    
+        <br>
+        <br>
+        
+        <br>
+        <br>
+        
+         
+         {% block content %}
+         <br>
+         
+         <center>
+             <div class="formulario3">
+           <a><h1>Servicios Registrados</h1></a>
+       
+        <table class="formulario3" >
+         <thead>
+             <tr>
+                 
+                 <td style="background-color: beige;"><h2>folio</h2></td>
+                 <td style="background-color: beige;"><h2>empresa</h2></td>
+                 <td style="background-color: beige;"><h2>fecha</h2></td>
+                 <td style="background-color: beige;"><h2>horaInicio</h2></td>
+                 <td style="background-color: beige;"><h2>horaTermino</h2></td>
+                 <td style="background-color: beige;"><h2>IdAscensor</h2></td>
+                 <td style="background-color: beige;"><h2>modeloAcensor</h2></td>
+                 <td style="background-color: beige;"><h2>fallas</h2></td>
+                 <td style="background-color: beige;"><h2>reparaciones</h2></td>
+                 <td style="background-color: beige;"><h2>piezasCambiadas</h2></td>
+                 <td style="background-color: beige;"><h2>tecnico</h2></td>
+     
+             </tr>
+     
+         </thead>
+     <tbody>
+         {% if servicios %}
+         {% for Servicio in servicios %}
+         <tr>
+             <td style="background-color: beige;">{{ Servicio.folio}}</td>
+             <td style="background-color: beige;">{{ Servicio.empresa}}</td>
+             <td style="background-color: beige;">{{ Servicio.fecha}}</td>
+             <td style="background-color: beige;">{{ Servicio.horaInicio}}</td>
+             <td style="background-color: beige;">{{ Servicio.horaTermino}}</td>
+             <td style="background-color: beige;">{{ Servicio.IdAscensor}}</td>
+             <td style="background-color: beige;">{{ Servicio.modeloAcensor}}</td>
+             <td style="background-color: beige;">{{ Servicio.fallas}}</td>
+             <td style="background-color: beige;">{{ Servicio.reparaciones}}</td>
+             <td style="background-color: beige;">{{ Servicio.piezasCambiadas}}</td>
+             <td style="background-color: beige;">{{ Servicio.tecnico}}</td>
+     
+     
+         </tr>
+         {% endfor %}
+     
+         {% else %}
+         <h1>No hay registros de Servicios disponibles</h1>
+     
+          {% endif %}
+     </tbody>
+     
+     </table>
+     </div>
+     </center>
+     
+         {% endblock content %} 
+         
+
+
+
+
+
+         
+         <footer class="pie ">
+                <div class=" wrapper">
+                        <p class="textPie ">	Desarrollo web y Mobile,<br>
+                         Pagina web creado por Victor Lara y Franco ortiz </p>
+                    </div>
+        </footer>
+
+</body>
+</html>

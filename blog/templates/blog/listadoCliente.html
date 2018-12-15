@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Menu Principal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" />
+    
+</head>
+<body background="{% static 'img/fondo-audio.jpg' %}">
+    <header >
+            <nav  class="menu">
+                    <a href="/">Inicio</a>
+                    <a href="/listadoCliente">Clientes</a>
+                    <a href="/listadoOrden">Listado de Orden</a>
+                    <a href="/Login">Iniciar Sesion</a> 
+                </nav>
+    </header>
+    <div>
+        <br>
+        <br>
+        
+    
+
+        {% block content %}
+        <br>
+        
+        <center>
+            <div class="formulario2">
+          <a><h1>Clientes Registrados</h1></a>
+      
+       <table >
+        <thead>
+            <tr>
+                
+                <td><h2>nombre</h2></td>
+                <td><h2>direccion</h2></td>
+                <td><h2>ciudad</h2></td>
+                <td><h2>comuna</h2></td>
+                <td><h2>telefono</h2></td>
+                <td><h2>email</h2></td>
+            </tr>
+    
+        </thead>
+        <tbody>
+        {% if clientes %}
+        {% for Empresa in clientes %}
+        <tr>
+            <td>{{ Empresa.nombre}}</td>
+            <td>{{ Empresa.direccion}}</td>
+            <td>{{ Empresa.ciudad}}</td>
+            <td>{{ Empresa.comuna}}</td>
+            <td>{{ Empresa.telefono}}</td>
+            <td>{{ Empresa.email}}</td>
+    
+        </tr>
+        {% endfor %}
+    
+        {% else %}
+        <h1>No hay registros de Clientes disponibles</h1>
+    
+         {% endif %}
+    </tbody>
+    
+    </table>
+    </div>
+    </center>
+    
+        {% endblock content %}    
+
+        
+
+         
+    </div> 
+    <footer class="pie ">
+            <div class=" wrapper">
+                    <p class="textPie ">	Desarrollo web y Mobile,<br>
+                     Pagina web creado por Victor Lara y Franco ortiz </p>
+                </div>
+    </footer>
+</body>
+</html>

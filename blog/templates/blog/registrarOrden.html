@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" />
+    <title>Menu Principal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+</head>
+<body background="{% static 'img/fondo-audio.jpg' %}">
+    <header>
+            <nav>
+                <a href="/">Inicio</a>
+                <a href="/listadoCliente">Clientes</a>
+                <a href="/listadoOrden">Listado de Orden</a>
+                <a href="/Login">Iniciar Sesion</a> 
+                </nav>
+    </header>
+    <div class="body">
+        {% block content %}
+     
+        <form name="datos" method="POST" >
+         {% csrf_token %}
+         
+         <center>
+    <div class="formulario2 ">
+            <h1><font color="black" >Registrar Servicio </font></h1>
+          {{form.as_p}}
+            <input class="button" type="submit"  id="boton" value="Enviar" on>
+       </div>                                
+        </center>
+    
+        </form>
+        {% endblock content %}
+
+            
+                    
+                </div> 
+        </div>
+        <footer class="pie ">
+                <div class=" wrapper">
+                        <p class="textPie ">	Desarrollo web y Mobile,<br>
+                         Pagina web creado por Victor Lara y Franco ortiz </p>
+                    </div>
+        </footer>
+</body>
+</html>
